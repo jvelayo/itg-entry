@@ -31,7 +31,7 @@ public class AccountController {
         this.accountService = accountService;
     }
 
-    @PostMapping(consumes = "applicati on/json")
+    @PostMapping(consumes = "application/json")
     @Operation(summary = "Create new account")
     public ResponseEntity<?> createAccount(@Valid @RequestBody AccountRequest accountRequest) {
         logger.info("Creating account for customer : {} ", accountRequest.getCustomerName());
